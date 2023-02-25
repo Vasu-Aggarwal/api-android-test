@@ -1,10 +1,9 @@
 const express = require("express");
-const port = process.env.PORT || 8000;
+const dotenv = require("dotenv").config();
+const port = process.env.PORT || 5000;
 const app = express();
-const cors = require("cors");
 
 app.use(express.json());
-app.use(cors);
 
 app.get("/", (req, res) => {
     res.send("Home page of the api testing.")
@@ -22,5 +21,5 @@ app.get("/api/test/json", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log("Node server is running");
+    console.log("Node server is running on the port: ", port);
 });
