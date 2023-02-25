@@ -22,5 +22,5 @@ app.get("/api/test/json", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log("Node server is running on the port: ", port);
+    console.log("Node server is running");
 });
